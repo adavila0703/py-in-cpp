@@ -46,21 +46,24 @@ strip(string str_in)
 #### Example
 
 ```cpp
-string str_1 = "  Spaces will strip away   ";
-cout << pyincpp::strip(str_1) << "Finish" << endl;
-
-string str_2 = "1 2 3 4 5 6";
-cout << pyincpp::strip(str_2) << endl;
-
-string str_3 = "1.              Angel_Davila";
-cout << pyincpp::strip(str_3) << endl;
+int main()
+{
+    string str_1 = "  Spaces will strip away   ";
+    cout << pyincpp::strip(str_1) << "Finish" << endl;
+    
+    string str_2 = "1 2 3 4 5 6";
+    cout << pyincpp::strip(str_2) << endl;
+    
+    string str_3 = "1.              Angel_Davila";
+    cout << pyincpp::strip(str_3) << endl;
+}
 ```
 #### Output
 
 ![](app/strip_output.PNG)
 
 # Replace()
-Like Python replace function, use can take a target string, locate an element and replace it with another.
+Like Python's replace function, use can take a target string, locate an element and replace it with another.
 ```cpp 
 replace(string replace_str, string element_1, string element_2)
 ```
