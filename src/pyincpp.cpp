@@ -1,3 +1,7 @@
+/*
+Version: 0.5
+Created by Angel Davila 7/5/2020
+*/
 #include "pyincpp.h"
 #include <iostream>
 using namespace std;
