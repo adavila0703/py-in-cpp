@@ -18,7 +18,7 @@ is already implemented.
 This is the C++ version of Pythons split function! You can take a target string and split it into a list.
  
  ```cpp
-string split(string str_in, string str_search, int element)
+split(string str_in, string str_search, int element)
 ```
 * str_in - The string you would like to split.
 * str_search - Where you would like to split the string.
@@ -49,7 +49,7 @@ int main()
 Python has this cool strip function that allows you to get rid of spacing in a string, now you can do it in C++.
 
 ```cpp 
-string strip(string str_in)
+strip(string str_in)
 ```
 * str_in - The string you would like to strip of white space.
 
