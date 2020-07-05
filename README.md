@@ -1,6 +1,13 @@
 # py-in-cpp
 Py-in-cpp is a collection of C++ functions that are built to simulate the behavior of some of Python's functionality without the use of its interpreter.
 
+Note: When importing library, no need to use std::
+
+```cpp 
+using namespace std;
+```
+is already implemented.
+
 # Table of Contents
 - [Split()](#split)
 - [Strip()](#Strip)
@@ -11,7 +18,7 @@ Py-in-cpp is a collection of C++ functions that are built to simulate the behavi
 This is the C++ version of Pythons split function! You can take a target string and split it into a list.
  
  ```cpp
-split(string str_in, string str_search, int element)
+string split(string str_in, string str_search, int element)
 ```
 * str_in - The string you would like to split.
 * str_search - Where you would like to split the string.
@@ -20,14 +27,19 @@ split(string str_in, string str_search, int element)
 #### Example
 
 ```cpp
-string str_1 = "Angel Davila";
-cout << pyincpp::split(str_1, " ", 1) << endl;
-
-string str_2 = "There are seven words in this sentence.";
-cout << pyincpp::split(str_2, " ", 2) << endl;
-
-string str_3 = "marley-EE#7068";
-cout << pyincpp::split(str_3, "#", 0) << endl;
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+    string str_1 = "Angel Davila";
+    cout << pyincpp::split(str_1, " ", 1) << endl;
+    
+    string str_2 = "There are seven words in this sentence.";
+    cout << pyincpp::split(str_2, " ", 2) << endl;
+    
+    string str_3 = "marley-EE#7068";
+    cout << pyincpp::split(str_3, "#", 0) << endl;
+}
 ```
 #### Output
 
@@ -37,7 +49,7 @@ cout << pyincpp::split(str_3, "#", 0) << endl;
 Python has this cool strip function that allows you to get rid of spacing in a string, now you can do it in C++.
 
 ```cpp 
-strip(string str_in)
+string strip(string str_in)
 ```
 * str_in - The string you would like to strip of white space.
 
@@ -46,6 +58,8 @@ strip(string str_in)
 #### Example
 
 ```cpp
+#include <iostream>
+#include "pyincpp.h"
 int main()
 {
     string str_1 = "  Spaces will strip away   ";
@@ -74,14 +88,19 @@ replace(string replace_str, string element_1, string element_2)
 #### Example
 
 ```cpp
-string str_1 = "His name is Angel he likes C++ and Python";
-cout << pyincpp::replace(str_1, "Angel", "Ben") << endl;
-
-string str_2 = "Replace all the ooooooooooooooooo's";
-cout << pyincpp::replace(str_2, "o", "G") << endl;
-
-string str_3 = "You can replace single letters or whole words anywhere!";
-cout << pyincpp::replace(str_3, "You", "Anyone") << endl;
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+    string str_1 = "His name is Angel he likes C++ and Python";
+    cout << pyincpp::replace(str_1, "Angel", "Ben") << endl;
+    
+    string str_2 = "Replace all the ooooooooooooooooo's";
+    cout << pyincpp::replace(str_2, "o", "G") << endl;
+    
+    string str_3 = "You can replace single letters or whole words anywhere!";
+    cout << pyincpp::replace(str_3, "You", "Anyone") << endl;
+}
 ```
 #### Output
 
@@ -98,14 +117,19 @@ sum(int *num_in, int element)
 #### Example
 
 ```cpp
-int num_1[] = {1, 2, 3, 4, 5, 6};
-cout << pyincpp::sum(num_1, 6) << endl;
-
-int num_2[] = {12, 44, 2};
-cout << pyincpp::sum(num_2, 3) << endl;
-
-int num_3[] = {5, 5, 5, 5, 5};
-cout << pyincpp::sum(num_3, 5) << endl;
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+    int num_1[] = {1, 2, 3, 4, 5, 6};
+    cout << pyincpp::sum(num_1, 6) << endl;
+    
+    int num_2[] = {12, 44, 2};
+    cout << pyincpp::sum(num_2, 3) << endl;
+    
+    int num_3[] = {5, 5, 5, 5, 5};
+    cout << pyincpp::sum(num_3, 5) << endl;
+}
 ```
 #### Output
 
