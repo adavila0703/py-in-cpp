@@ -4,6 +4,7 @@ Created by Angel Davila 7/5/2020
 */
 #include "pyincpp.h"
 #include <iostream>
+#include <cstdarg>
 using namespace std;
 //hello
 namespace pyincpp 
@@ -113,21 +114,21 @@ namespace pyincpp
 		return temp_num;
 	}
 
-	int print(int int_out)
+	int print(int num_in)
 	{
-		cout << int_out << endl;
+		cout << num_in << endl;
 		return 0;
 	}
 
-	string print(string str_out)
+	string print(string str_in)
 	{
-		cout << str_out << endl;
+		cout << str_in << endl;
 		return "";
 	}
 
-	float print(float flt_out)
+	float print(float flt_in)
 	{
-		cout << flt_out << endl;
+		cout << flt_in << endl;
 		return 0.0f;
 	}
 
@@ -205,5 +206,56 @@ namespace pyincpp
 		}
 		return newstring;
 	}
+
+	int count(string str_in, string str_search)
+	{
+		string checkstring, temp_string, newstring[100];
+		int elestore = 0, break_count = 0, string_count = 0;
+
+		for (char i : str_in)
+		{
+			temp_string += i;
+			if (temp_string.find(" ") != string::npos)
+			{
+				newstring[elestore] = temp_string;
+				elestore++;
+				temp_string = "";
+			}
+			break_count++;
+			if (break_count == str_in.length())
+			{
+				newstring[elestore] = temp_string;
+				elestore++;
+				temp_string = "";
+			}
+		}
+		for (int i = 0; i < sizeof(newstring)/sizeof(newstring[0]); i++)
+		{
+			if (newstring[i].find(str_search) != string::npos)
+			{
+				string_count++;
+			}
+			else
+			{
+				continue;
+			}
+		}
+		return string_count;
+	}
+
+	int len(int num_in)
+	{
+		string str_conv = to_string(num_in);
+		int num_stored = str_conv.length();
+		return num_stored;
+	}
+
+	int len(string str_in)
+	{
+		int str_len = str_in.length();
+		return str_len;
+	}
+
+	
 
 }

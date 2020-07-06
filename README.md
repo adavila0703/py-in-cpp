@@ -11,6 +11,7 @@ using namespace std;
 Built-in Functions
 - [Sum()](#sum)
 - [Print()](#print)
+- [Len()](#len)
 
 String Methods
 - [Split()](#split)
@@ -19,11 +20,12 @@ String Methods
 - [Lower()](#lower)
 - [Upper()](#upper)
 - [Capitalize()](#capitalize)
+- [Count()](#count)
 
 # Sum()
 Summate all integers in your array at ease!
 ```cpp 
-sum(int *num_in, int element)
+sum(num_in, element)
 ```
 * num_in - The target array you would like to summate.
 * element - The number of elements in your array.
@@ -49,7 +51,7 @@ int main()
 
 ![](app/sum_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Print()
 A quicker way to print!
@@ -79,13 +81,41 @@ int main()
 
 ![](app/print_output.PNG)
 
-[Back table of contents](#table-of-contents)
- 
+[Back to table of contents](#table-of-contents)
+
+# Len()
+Returns the length of an object with types int and string.
+```cpp 
+len(object_length)
+```
+* object_length - Compute the length of characters in your given object.
+
+#### Example
+
+```cpp
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+	int num_1 = 12, num_2 = 12345;
+	string str_1 = "How long?", str_2 = "Not Long";
+	cout << pyincpp::len(num_1) << endl;
+	cout << pyincpp::len(num_2) << endl;
+	cout << pyincpp::len(str_1) << endl;
+	cout << pyincpp::len(str_2) << endl;
+}
+```
+#### Output
+
+![](app/len_output.PNG)
+
+[Back to table of contents](#table-of-contents)
+
 # Split()
 This is the C++ version of Pythons split function! You can take a target string and split it into a list.
  
  ```cpp
-split(string str_in, string str_search, int element)
+split(str_in, str_search, element)
 ```
 * str_in - The string you would like to split.
 * str_search - Where you would like to split the string.
@@ -112,13 +142,13 @@ int main()
 
 ![](app/split_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Strip()
 Python has this cool strip function that allows you to get rid of spacing in a string, now you can do it in C++.
 
 ```cpp 
-strip(string str_in)
+strip(str_in)
 ```
 * str_in - The string you would like to strip of white space.
 
@@ -128,7 +158,6 @@ strip(string str_in)
 
 ```cpp
 #include <iostream>
-#include <string>
 #include "pyincpp.h"
 int main()
 {
@@ -146,12 +175,12 @@ int main()
 
 ![](app/strip_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Replace()
 Like Python's replace function, use can take a target string, locate an element and replace it with another.
 ```cpp 
-replace(string replace_str, string element_1, string element_2)
+replace(replace_str, element_1, element_2)
 ```
 * replace_str - The target string you would like to modify.
 * element_1 - The character or word you would like to replace in your string.
@@ -178,12 +207,12 @@ int main()
 
 ![](app/replace_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Lower()
 Just like Python's .lower(), you can use pyincpp's lower function to lower case all the characters in a string.
 ```cpp 
-lower(string str_in)
+lower(tr_in)
 ```
 * str_in - String that will be converted to all lower case.
 
@@ -208,12 +237,12 @@ int main()
 
 ![](app/lower_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Upper()
 Just like Python's .upper(), you can use pyincpp's upper function to upper case all the characters in a given string.
 ```cpp 
-upper(string str_in)
+upper(str_in)
 ```
 * str_in - String that will be converted to all upper case.
 
@@ -238,12 +267,12 @@ int main()
 
 ![](app/upper_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
 
 # Capitalize()
 Capitalize the first character in your string!
 ```cpp 
-capitalize(string str_in)
+capitalize(str_in)
 ```
 * str_in - The given string that will have only its first element capitalized.
 
@@ -260,7 +289,7 @@ int main()
 	string str_2 = "gG";
 	cout << pyincpp::capitalize(str_2) << endl;
 
-	string str_3 = "His Name Is Angel And He Loves C++ and Python";
+	string str_3 = "his Name Is Angel And He Loves C++ and Python";
 	pyincpp::print(pyincpp::capitalize(pyincpp::lower(str_3)));
 }
 ```
@@ -268,7 +297,42 @@ int main()
 
 ![](app/cap_output.PNG)
 
-[Back table of contents](#table-of-contents)
+[Back to table of contents](#table-of-contents)
+
+# Count()
+Returns the number of times a specified value occurs in a string.
+```cpp 
+count(str_in, str_search)
+```
+* str_in - The string you would like to search through.
+* str_search - The specified word you are looking for.
+
+#### Example
+
+```cpp
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+	string str_1 = "hello world, hello world, hello world";
+	cout << pyincpp::count(str_1, "world") << endl;
+
+	string str_2 = "Fear leads to anger; anger leads to hatred; \
+					hatred leads to conflict; conflict leads to \
+					suffering. \
+					— Yoda, in Star Wars Episode I: The Phantom Menace.";
+	cout << pyincpp::count(str_2, "conflict") << endl;
+
+	string str_3 = "how much wood could a woodchuck chuck chuck if \
+					a woodchuck could chuck wood";
+	cout << pyincpp::count(str_3, "chuck") << endl;
+}
+```
+#### Output
+
+![](app/count_output.PNG)
+
+[Back to table of contents](#table-of-contents)
 
 
 
