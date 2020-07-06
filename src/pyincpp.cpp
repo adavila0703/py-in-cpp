@@ -5,7 +5,7 @@ Created by Angel Davila 7/5/2020
 #include "pyincpp.h"
 #include <iostream>
 using namespace std;
-
+//hello
 namespace pyincpp 
 {
 	//String functions
@@ -144,6 +144,66 @@ namespace pyincpp
 		return false;
 	}
 
-	
-	
+	string lower(string str_in)
+	{
+		string newstring;
+		int str_value;
+		for (int i = 0; i < str_in.length(); i++)
+		{
+			if (int(str_in[i]) >= 65 && int(str_in[i]) <= 90)
+			{
+				str_value = int(str_in[i]) + 32;
+				newstring += char(str_value);
+			}
+			else if (int(str_in[i]) == 32)
+			{
+				newstring += " ";
+			}
+			else
+			{
+				newstring += str_in[i];
+			}
+		}
+		return newstring;
+	}
+
+	string upper(string str_in)
+	{
+		string newstring;
+		int str_value;
+		for (int i = 0; i < str_in.length(); i++)
+		{
+			if (int(str_in[i]) >= 97 && int(str_in[i]) <= 122)
+			{
+				str_value = int(str_in[i]) - 32;
+				newstring += char(str_value);
+			}
+			else if (int(str_in[i]) == 32)
+			{
+				newstring += " ";
+			}
+			else
+			{
+				newstring += str_in[i];
+			}
+		}
+		return newstring;
+	}
+
+	string capitalize(string str_in)
+	{
+		string newstring;
+		int str_value;
+		if (int(str_in[0]) >= 97 && int(str_in[0]) <= 122)
+		{
+			str_value = int(str_in[0]) - 32;
+			newstring += char(str_value);
+		}
+		for (int i = 1; i < str_in.length(); i++)
+		{
+			newstring += str_in[i];
+		}
+		return newstring;
+	}
+
 }

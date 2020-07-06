@@ -17,8 +17,7 @@ namespace pyincpp
 	string print(string str_out);
 	float print(float flt_out);
 	bool print(bool bool_out);
-	
-
-	
-
+	string lower(string str_in);
+	string upper(string str_in);
+	string capitalize(string str_in);
 }
