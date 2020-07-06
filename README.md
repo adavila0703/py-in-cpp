@@ -128,6 +128,7 @@ strip(string str_in)
 
 ```cpp
 #include <iostream>
+#include <string>
 #include "pyincpp.h"
 int main()
 {
