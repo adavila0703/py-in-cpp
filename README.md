@@ -1,15 +1,11 @@
 # py-in-cpp
-Py-in-cpp is a collection of C++ functions that are built to match Python's
-* Built-in functions
-* String Methods
-* List/Dictionary Methods
+Py-in-cpp is a collection of C++ functions that are built to match Python's built-in functions, string methods and list/dictionary methods.
 
-Note: When importing library, no need to use std::
-
+Note: namespace std; is already implemented when you import pyincpp.h
 ```cpp 
 using namespace std;
 ```
-is already implemented.
+
 
 # Table of Contents
 Functions that are live
