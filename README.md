@@ -1,5 +1,8 @@
 # py-in-cpp
-Py-in-cpp is a collection of C++ functions that are built to simulate the behavior of some of Python's functionality without the use of its interpreter.
+Py-in-cpp is a collection of C++ functions that are built to match Python's
+* Built-in functions
+* String Methods
+* List/Dictionary Methods
 
 Note: When importing library, no need to use std::
 
@@ -9,10 +12,12 @@ using namespace std;
 is already implemented.
 
 # Table of Contents
+Functions that are live
 - [Split()](#split)
 - [Strip()](#Strip)
 - [Replace()](#replace)
 - [Sum()](#sum)
+- [Print()](#print)
  
 # Split()
 This is the C++ version of Pythons split function! You can take a target string and split it into a list.
@@ -134,6 +139,35 @@ int main()
 #### Output
 
 ![](app/sum_output.PNG)
+
+# Print()
+A quicker way to print!
+```cpp 
+print(*args)
+```
+* args - Can be int, float, string or bool.
+
+#### Example
+
+```cpp
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+    bool a = false;
+	int b = 100;
+	string c = "hello world";
+	float d = 3.12;
+	pyincpp::print(a);
+	pyincpp::print(b);
+	pyincpp::print(c);
+	pyincpp::print(d);
+}
+```
+#### Output
+
+![](app/print_output.PNG)
+
 
 
 

@@ -113,5 +113,37 @@ namespace pyincpp
 		return temp_num;
 	}
 
+	int print(int int_out)
+	{
+		cout << int_out << endl;
+		return 0;
+	}
+
+	string print(string str_out)
+	{
+		cout << str_out << endl;
+		return "";
+	}
+
+	float print(float flt_out)
+	{
+		cout << flt_out << endl;
+		return 0.0f;
+	}
+
+	bool print(bool bool_out)
+	{
+		if (bool_out == 1)
+		{
+			cout << "True" << endl;
+		}
+		else
+		{
+			cout << "False" << endl;
+		}
+		return false;
+	}
+
+	
 	
 }
