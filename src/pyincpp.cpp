@@ -57,22 +57,22 @@ namespace pyincpp
 		return temp_string;
 	}
 
-	string replace(string replace_str, string element_1, string element_2)
+	string replace(string target, string search, string replace)
 	{
-		string checkstring, temp_string, new_insert = element_2 + " ";
-		int elelocation = replace_str.find(element_1), count = 0, newcount = 0;
+		string checkstring, temp_string, new_insert = replace + " ";
+		int elelocation = target.find(search), count = 0, newcount = 0;
 		bool ele_status = false;
 		
-		for (char i : replace_str)
+		for (char i : target)
 		{	
-			if (element_1.length() > 1)
+			if (search.length() > 1)
 			{
 				if (count == elelocation)
 				{
 					temp_string += new_insert;
 					ele_status = true;
 				}
-				if (newcount == element_1.length() + 1)
+				if (newcount == search.length() + 1)
 				{
 					ele_status = false;
 				}
@@ -90,9 +90,9 @@ namespace pyincpp
 			else
 			{
 				checkstring = i;
-				if (checkstring.find(element_1) != string::npos)
+				if (checkstring.find(search) != string::npos)
 				{
-					temp_string += element_2;
+					temp_string += replace;
 				}
 				else
 				{
@@ -104,13 +104,13 @@ namespace pyincpp
 	}
 
 	//Int functions
-	int sum(int *num_in, int element)
+	int sum(int *arr_in, int arr_size)
 	{
 		int temp_num = 0;
 
-		for (int i = 0; i < element; i++)
+		for (int i = 0; i < arr_size; i++)
 		{
-			temp_num += num_in[i];
+			temp_num += arr_in[i];
 		}
 		return temp_num;
 	}
@@ -257,11 +257,11 @@ namespace pyincpp
 		return str_len;
 	}
 
-	int min(int * arr_in, int arr_length)
+	int min(int * arr_in, int arr_size)
 	{
 		int stored_num = arr_in[0];
 	
-		for (int i = 0; i < arr_length; i++)
+		for (int i = 0; i < arr_size; i++)
 		{
 			if (arr_in[i] < stored_num)
 			{
@@ -275,11 +275,11 @@ namespace pyincpp
 		return stored_num;
 	}
 
-	int max(int* arr_in, int arr_length)
+	int max(int* arr_in, int arr_size)
 	{
 		int stored_num = arr_in[0];
 
-		for (int i = 0; i < arr_length; i++)
+		for (int i = 0; i < arr_size; i++)
 		{
 			if (arr_in[i] > stored_num)
 			{

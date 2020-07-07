@@ -1,10 +1,11 @@
 # py-in-cpp
-Py-in-cpp is a collection of C++ functions that are built to match Python's built-in functions, string methods and list/dictionary methods.
+Py-in-cpp is a collection of C++ functions that are built to match Pythons built-in functions, string methods and more!
 
-Note: namespace std; is already implemented when you import pyincpp.h
+Note: namespace std; 
 ```cpp 
 using namespace std;
 ```
+is already implemented when you import pyincpp.h
 
 
 # Table of Contents
@@ -24,12 +25,12 @@ String Methods
 - [Count()](#count)
 
 # Sum()
-Summate all integers in your array at ease!
+Summate all integers in an array at ease!
 ```cpp 
-sum(num_in, element)
+sum(arr_in, arr_size)
 ```
-* num_in - The target array you would like to summate.
-* element - The number of elements in your array.
+* arr_in - The target array you would like to summate.
+* arr_size - The size of your array.
 
 #### Example
 
@@ -57,7 +58,7 @@ int main()
 # Print()
 A quicker way to print!
 ```cpp 
-print(*args)
+print(args)
 ```
 * args - Can be int, float, string or bool.
 
@@ -85,11 +86,11 @@ int main()
 [Back to table of contents](#table-of-contents)
 
 # Len()
-Returns the length of an object with types int and string.
+Using either int or string, returns the length of characters with an object.
 ```cpp 
-len(object_length)
+len(object)
 ```
-* object_length - Compute the length of characters in your given object.
+* object - The object you would like to pass for computation.
 
 #### Example
 
@@ -115,10 +116,10 @@ int main()
 # Min()
 Returns the smallest number in your array!
 ```cpp 
-min(*arr_in, arr_length);
+min(arr_in, arr_size);
 ```
-* arr_in - Pass in your array
-* element - Length of your array.
+* arr_in - The array you would like to pass in.
+* arr_size - The size of your array.
 
 #### Example
 
@@ -148,8 +149,8 @@ Returns the largest number in your array!
 ```cpp 
 min(*arr_in, arr_length);
 ```
-* arr_in - Pass in your array
-* element - Length of your array.
+* arr_in - The array you would like to pass in.
+* arr_size - The size of your array.
 
 #### Example
 
@@ -175,14 +176,14 @@ int main()
 [Back to table of contents](#table-of-contents)
 
 # Split()
-This is the C++ version of Pythons split function! You can take a target string and split it into a list.
+This is the C++ version of Pythons split function! You can take a target string, split it into a list and return any element of your choosing.
  
  ```cpp
 split(str_in, str_search, element)
 ```
 * str_in - The string you would like to split.
-* str_search - Where you would like to split the string.
-* element - Which element you would like to return.
+* str_search - The point at which you would like the string split.
+* element - The element you would like to return.
 
 #### Example
 
@@ -215,7 +216,7 @@ strip(str_in)
 ```
 * str_in - The string you would like to strip of white space.
 
-*Note: currently takes away all white space, including spaces in the middle of a string. Working to mimic Python's actual function.
+*Note: currently takes away all white space, including spaces in the middle of a string. Working to mimic Pythons actual function.
 
 #### Example
 
@@ -241,13 +242,13 @@ int main()
 [Back to table of contents](#table-of-contents)
 
 # Replace()
-Like Python's replace function, use can take a target string, locate an element and replace it with another.
+Like Pythons replace function, use can take a target string, locate an element and replace it with another.
 ```cpp 
-replace(replace_str, element_1, element_2)
+replace(target, search, replace)
 ```
-* replace_str - The target string you would like to modify.
-* element_1 - The character or word you would like to replace in your string.
-* element_2 - The new character or word you would like to use to replace.
+* target - The target string you would like to modify.
+* search - The character or word you would like to replace in your string.
+* replace - The new character or word you would like to use to replace with.
 
 #### Example
 
@@ -273,9 +274,9 @@ int main()
 [Back to table of contents](#table-of-contents)
 
 # Lower()
-Just like Python's .lower(), you can use pyincpp's lower function to lower case all the characters in a string.
+Just like Pythons .lower(), you can use pyincpp's lower function to lower case all the characters in a string.
 ```cpp 
-lower(tr_in)
+lower(str_in)
 ```
 * str_in - String that will be converted to all lower case.
 
@@ -303,7 +304,7 @@ int main()
 [Back to table of contents](#table-of-contents)
 
 # Upper()
-Just like Python's .upper(), you can use pyincpp's upper function to upper case all the characters in a given string.
+Just like Pythons .upper(), you can use pyincpp's upper function to upper case all the characters in a given string.
 ```cpp 
 upper(str_in)
 ```

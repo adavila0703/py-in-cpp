@@ -11,19 +11,19 @@ namespace pyincpp
 {
 	string split(string str_in, string str_search, int element);
 	string strip(string str_in);
-	string replace(string replace_str, string element_1, string element_2);
+	string replace(string target, string search, string replace);
 	string print(string str_in);
 	string lower(string str_in);
 	string upper(string str_in);
 	string capitalize(string str_in);
 
-	int sum(int* num_in, int element);
+	int sum(int *arr_in, int arr_size);
 	int print(int num_in);
 	int count(string str_in, string str_search);
 	int len(int num_in);
 	int len(string str_in);
-	int min(int *arr_in, int arr_length);
-	int max(int *arr_in, int arr_length);
+	int min(int *arr_in, int arr_size);
+	int max(int *arr_in, int arr_size);
 
 	float print(float flt_in);
 
