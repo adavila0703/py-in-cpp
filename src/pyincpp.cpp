@@ -5,6 +5,7 @@ Created by Angel Davila 7/5/2020
 #include "pyincpp.h"
 #include <iostream>
 #include <cstdarg>
+#include <vector>
 using namespace std;
 //hello
 namespace pyincpp 
@@ -256,6 +257,40 @@ namespace pyincpp
 		return str_len;
 	}
 
+	int min(int * arr_in, int arr_length)
+	{
+		int stored_num = arr_in[0];
 	
+		for (int i = 0; i < arr_length; i++)
+		{
+			if (arr_in[i] < stored_num)
+			{
+				stored_num = arr_in[i];
+			}
+			else
+			{
+				continue;
+			}
+		}
+		return stored_num;
+	}
+
+	int max(int* arr_in, int arr_length)
+	{
+		int stored_num = arr_in[0];
+
+		for (int i = 0; i < arr_length; i++)
+		{
+			if (arr_in[i] > stored_num)
+			{
+				stored_num = arr_in[i];
+			}
+			else
+			{
+				continue;
+			}
+		}
+		return stored_num;
+	}
 
 }

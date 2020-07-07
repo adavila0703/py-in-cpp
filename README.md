@@ -12,6 +12,7 @@ Built-in Functions
 - [Sum()](#sum)
 - [Print()](#print)
 - [Len()](#len)
+- [Min()](#min)
 
 String Methods
 - [Split()](#split)
@@ -108,6 +109,68 @@ int main()
 #### Output
 
 ![](app/len_output.PNG)
+
+[Back to table of contents](#table-of-contents)
+
+# Min()
+Returns the smallest number in your array!
+```cpp 
+min(*arr_in, arr_length);
+```
+* arr_in - Pass in your array
+* element - Length of your array.
+
+#### Example
+
+```cpp
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+	int num_1[] = { 5, 2, 55, 24 };
+	cout << pyincpp::min(num_1, 4) << endl;
+	
+	int num_2[] = { 62, 66, 35, 6234, 42 , 65 , 25 };
+	cout << pyincpp::min(num_2, 7) << endl;
+
+	int num_3[] = { 62, 2, 3 };
+	cout << pyincpp::min(num_3, 3) << endl;
+}
+```
+#### Output
+
+![](app/min_output.PNG)
+
+[Back to table of contents](#table-of-contents)
+
+# Max()
+Returns the largest number in your array!
+```cpp 
+min(*arr_in, arr_length);
+```
+* arr_in - Pass in your array
+* element - Length of your array.
+
+#### Example
+
+```cpp
+#include <iostream>
+#include "pyincpp.h"
+int main()
+{
+	int num_1[] = { 5, 2, 55, 24 };
+	cout << pyincpp::max(num_1, 4) << endl;
+
+	int num_2[] = { 62, 66, 35, 6234, 42 , 65 , 25 };
+	cout << pyincpp::max(num_2, 7) << endl;
+
+	int num_3[] = { 62, 2, 3 };
+	cout << pyincpp::max(num_3, 3) << endl;
+}
+```
+#### Output
+
+![](app/max_output.PNG)
 
 [Back to table of contents](#table-of-contents)
 

@@ -22,6 +22,8 @@ namespace pyincpp
 	int count(string str_in, string str_search);
 	int len(int num_in);
 	int len(string str_in);
+	int min(int *arr_in, int arr_length);
+	int max(int *arr_in, int arr_length);
 
 	float print(float flt_in);
 
